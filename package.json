@@ -1,0 +1,33 @@
+{
+  "name": "@fappurbate/channel-bot",
+  "version": "0.1.0",
+  "description": "Bot side of the library allowing easy communication among Chaturbate apps & bots and Fappurbate extensions.",
+  "main": "dist/index.js",
+  "scripts": {
+    "dev": "npx webpack --watch",
+    "build": "npx webpack --prod",
+    "prepare": "npm run build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fappurbate/channel-bot.git"
+  },
+  "keywords": [
+    "chaturbate",
+    "fappurbate"
+  ],
+  "author": "Kothique Félixx <kothique@protonmail.ch>",
+  "license": "WTFPL",
+  "bugs": {
+    "url": "https://github.com/fappurbate/channel-bot/issues"
+  },
+  "homepage": "https://github.com/fappurbate/channel-bot#readme",
+  "devDependencies": {
+    "@babel/core": "^7.2.2",
+    "@babel/preset-env": "^7.3.1",
+    "babel-loader": "^8.0.5",
+    "webpack": "^4.29.4",
+    "webpack-cli": "^3.2.3"
+  }
+}
