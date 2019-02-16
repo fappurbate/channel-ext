@@ -23,5 +23,8 @@ module.exports = {
       }
     ]
   },
+  externals: {
+    fb: 'fb'
+  },
   devtool: 'source-map'
 };
