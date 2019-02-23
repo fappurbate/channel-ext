@@ -1,13 +1,14 @@
-import EventEmitter from 'events';
+const EventEmitter = require('events');
 
 const extensionEvents = new EventEmitter;
 const testBedEvents = new EventEmitter;
 
-export { testBedEvents as events };
+module.exports.events = testBedEvents;
 
-export function sendMessage(type, timestamp, data) {
+function sendMessage(type, timestamp, data) {
   extensionEvents.emit('message', type, timestamp, data);
 }
+module.exports.sendMessage = sendMessage;
 
 class FappurbateError extends Error {
   constructor(message, type, data) {
@@ -20,7 +21,7 @@ class FappurbateError extends Error {
   }
 }
 
-export default {
+module.exports = {
   $events: testBedEvents,
   $sendMessage: sendMessage,
   runtime: {

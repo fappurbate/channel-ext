@@ -1,4 +1,4 @@
-export class Failure extends fb.Error {
+class Failure extends fb.Error {
   constructor(data = {}) {
     super(data.message || '', 'ERR_FAILING_RESPONSE', data);
     Error.captureStackTrace(this, Failure);
@@ -6,3 +6,7 @@ export class Failure extends fb.Error {
     this.name = 'Failure';
   }
 }
+
+module.exports = {
+  Failure
+};

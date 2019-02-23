@@ -1,9 +1,7 @@
-import '@babel/polyfill';
+const EventEmitter = require('events');
+const RequestTarget = require('@kothique/request-target');
 
-import EventEmitter from 'events';
-import RequestTarget from '@kothique/request-target';
-
-import { Failure } from './errors';
+const { Failure } = require('./errors');
 
 const events = new EventEmitter;
 
@@ -39,7 +37,7 @@ fb.cb.onMessage.addHandler((type, timestamp, data) => {
   }
 });
 
-export default class Channel {
+class Channel {
   /**
    * @param {object} options
    * @param {string} options.name - Must not clash with channel names of other bots.
@@ -189,7 +187,7 @@ export default class Channel {
     );
   }
 }
+module.exports = Channel;
 
 Channel.Failure = Failure;
-
-export { Failure };
+Channel.Channel = Channel;
