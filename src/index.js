@@ -115,7 +115,7 @@ class Channel {
    * @param {string} subject
    * @param {any?}   data
    * @return {Promise}
-   * @throws {fb.Error}
+   * @throws {Failure}
    */
   request(subject, data) {
     const requestId = this._nextRequestId++;
