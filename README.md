@@ -70,3 +70,11 @@ Send a request to the bot (app). If an error response is received, returns a pro
 - `data` `any?` `default: {}` Data to attach.
 
 Represents an error response from [`request(subject, data)`](#requestsubject-data-promise).
+
+##### `name`
+
+- `string` `=== 'Failure'`
+
+##### `type`
+
+- `string` `=== 'ERR_FAILURE'`
