@@ -7,6 +7,8 @@ Extension side of the library that allows easy communication among Chaturbate ap
 
 #### Class: Channel
 
+Represents a channel between a Chaturbate bot (app) and a Fappurbate extension. Allows communication with events and requests.
+
 ##### `new Channel(options)`
 
 - `options.name` `string` Name of the channel. Must not clash with channel names of others instances (including other apps & bots in the same chat).
@@ -65,11 +67,11 @@ Send a request to the bot (app). If an error response is received, returns a pro
 
 #### Class: Failure
 
+A subclass of `fb.Error` that represents an error response from [`request(subject, data)`](#requestsubject-data-promise).
+
 ##### `new Failure(data)`
 
 - `data` `any?` `default: {}` Data to attach.
-
-Represents an error response from [`request(subject, data)`](#requestsubject-data-promise).
 
 ##### `name`
 
