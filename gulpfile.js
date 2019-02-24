@@ -13,10 +13,10 @@ const js = ({ dev = true } = {}) => function () {
     sourcemap: dev,
     format: 'cjs',
     plugins: [
-      resolve(),
-      commonjs({
-        ignore: ['events']
-      })
+      resolve({
+        preferBuiltins: false
+      }),
+      commonjs()
     ]
   })
   .pipe(source('index.js'))

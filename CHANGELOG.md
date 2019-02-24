@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.2.2
+
+Include `events` into the bundle.
+
 ## 0.2.1
 
 - Update documentation.
