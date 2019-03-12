@@ -80,4 +80,17 @@ describe('requests', function () {
       { content: '/fb/channel/["test", "request", 0, "test", { "myData": 42 }]' }
     );
   });
+
+  it('all handlers are called', function () {
+    let called = 0;
+    this.channel.onRequest.addHandler('test', () => called++);
+    this.channel.onRequest.addHandler('test', () => called++);
+
+    fb.$sendMessage(
+      'notice',
+      new Date,
+      { content: '/fb/channel/["test", "request", 0, "test", { "myData": 42 }]' }
+    );
+    expect(called).to.equal(2);
+  });
 });

@@ -48,7 +48,9 @@ class Channel {
     this._requests = {};
 
     this._eventHandlers = new EventEmitter;
-    this._requestHandlers = new RequestTarget;
+    this._requestHandlers = new RequestTarget({
+      callAllHandlers: true
+    });
 
     this.onEvent = {
       addListener: (subject, callback) => this._eventHandlers.on(subject, callback),

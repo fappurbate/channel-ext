@@ -1,8 +1,12 @@
 # Changelog
 
+## 1.0.0
+
+- All handlers are called even if response already received.
+
 ## 0.2.2
 
-Include `events` into the bundle.
+- Include `events` into the bundle.
 
 ## 0.2.1
 

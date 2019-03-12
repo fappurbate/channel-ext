@@ -1,6 +1,6 @@
 {
   "name": "@fappurbate/channel-ext",
-  "version": "0.2.2",
+  "version": "1.0.0",
   "description": "Extension side of the library allowing easy communication among Chaturbate apps & bots and Fappurbate extensions.",
   "main": "dist/index.js",
   "scripts": {
@@ -42,6 +42,6 @@
     "events": "^3.0.0"
   },
   "engines": {
-    "node": ">=10.15.1"
+    "node": ">=10.x.x"
   }
 }

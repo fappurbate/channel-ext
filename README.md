@@ -32,7 +32,7 @@ Remove an event listener.
 - `subject` `string` Name of the request.
 - `handler` `any => void|any|Promise` Handler will be called on a given request.
 
-Add a handler for a given request subject. It will be called with the data attached as the first argument. If the handler returns a non-undefined value, no subsequently added handlers will be called. If throws an error, it is sent back to the bot (app) as an error response. May also return a Promise.
+Add a handler for a given request subject. It will be called with the data attached as the first argument. All handlers are called, but only the first received response is used. If throws an error, it is sent back to the bot (app) as an error response. May also return a Promise.
 
 ##### `onRequest.removeHandler(subject, handler): this`
 
